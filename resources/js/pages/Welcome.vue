@@ -33,55 +33,34 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll);
 });
 
-const heroImage =
-    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=80';
+const toAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
-const aboutImage =
-    'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1200&q=80';
+const heroImage = toAssetPath('/img/1.jpg');
+
+const aboutImage = toAssetPath('/img/4.jpg');
 
 const editorial = [
     {
-        src: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1000&q=80',
-        title: 'Vogue Hommes',
-        location: 'Paris, FR',
-        year: '2025',
+        src: toAssetPath('/img/3.jpg'),
+        title: '',
+        location: '',
+        year: '2026',
         span: 'md:col-span-5 md:row-span-2',
     },
     {
-        src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80',
-        title: 'GQ Style',
-        location: 'New York, US',
-        year: '2025',
+        src: toAssetPath('/img/2.jpg'),
+        title: '',
+        location: '',
+        year: '2026',
         span: 'md:col-span-3',
     },
     {
-        src: 'https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=900&q=80',
-        title: 'Numéro Berlin',
-        location: 'Berlin, DE',
-        year: '2024',
-        span: 'md:col-span-4',
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80',
-        title: 'L’Officiel',
-        location: 'Milan, IT',
-        year: '2024',
-        span: 'md:col-span-4',
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=900&q=80',
-        title: 'Fucking Young!',
-        location: 'Madrid, ES',
-        year: '2024',
+        src: toAssetPath('/img/1.jpg'),
+        title: '',
+        location: '',
+        year: '2026',
         span: 'md:col-span-3',
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1583195763986-0eca78c19a93?auto=format&fit=crop&w=900&q=80',
-        title: 'Document Journal',
-        location: 'London, UK',
-        year: '2023',
-        span: 'md:col-span-5',
-    },
+    }
 ];
 
 const brands = [
@@ -100,28 +79,28 @@ const brands = [
 ];
 
 const stats = [
-    { label: 'Height', value: '6\u20322\u2033 / 188 cm' },
-    { label: 'Chest', value: '40\u2033 / 102 cm' },
-    { label: 'Waist', value: '32\u2033 / 81 cm' },
-    { label: 'Suit', value: '40 R' },
-    { label: 'Shoe', value: 'US 11 / EU 44' },
-    { label: 'Hair', value: 'Dark Brown' },
-    { label: 'Eyes', value: 'Hazel' },
-    { label: 'Based', value: 'Paris · NYC' },
+    { label: 'Height', value: '6\u20320\u2033 / 180 cm' },
+    // { label: 'Chest', value: '40\u2033 / 102 cm' },
+    // { label: 'Waist', value: '32\u2033 / 81 cm' },
+    // { label: 'Suit', value: '40 R' },
+    // { label: 'Shoe', value: 'US 11 / EU 44' },
+    { label: 'Hair', value: 'Salted Brown' },
+    { label: 'Eyes', value: 'Brown' },
+    { label: 'Based', value: 'Melbourne' },
 ];
 
 const press = [
     {
-        quote: 'A face that defines the new editorial silhouette — quiet, exact, magnetic.',
-        source: 'Vogue Hommes',
+        quote: `J made things so easy and comfortable, I couldn't believe how much fun we had.`,
+        source: 'T.S.',
     },
     {
-        quote: 'Vale moves through a frame the way couture moves through a room.',
-        source: 'Document Journal',
+        quote: `One of the most personable and genuine guys I've ever met.`,
+        source: 'L.L.',
     },
     {
-        quote: 'One of the most arresting faces of the season.',
-        source: 'Numéro Berlin',
+        quote: `There's a reason we've had a dozen dates at this point.`,
+        source: 'L.R.',
     },
 ];
 
@@ -155,40 +134,40 @@ const timeline = [
 
 const services = [
     {
-        title: 'Editorial',
-        rate: 'From €2,400 / day',
-        body: 'Print and digital editorials for fashion titles. Comfortable on long-form story shoots, location work, and quiet studio days.',
-        notes: 'Min. ½ day · Usage 12 mo.',
+        title: 'Easy Hang Out',
+        rate: 'From $100 / hour',
+        body: 'We can just start with a catchup over a coffee or a drink.',
+        notes: 'Min. half hour',
     },
     {
-        title: 'Runway & Fashion Week',
-        rate: 'On request',
-        body: 'Exclusives, openings, and full schedules across Paris, Milan, New York, and London. Available for fittings up to 72 hrs prior.',
-        notes: 'Mens FW · Resort · Couture',
+        title: 'Play Time',
+        rate: 'From $200 / hour',
+        body: 'Some simple fun together in whatever way suits your desires.',
+        notes: 'Min. 1 hour',
     },
     {
-        title: 'Campaign & Lookbook',
-        rate: 'From €6,800 / day',
-        body: 'Seasonal brand campaigns, hero imagery, and lookbooks. Buy-outs negotiated per territory and channel.',
-        notes: 'Print · Digital · OOH',
+        title: 'Couples Play Time',
+        rate: 'From $250 / hour',
+        body: 'Play time but with multiple friends.',
+        notes: 'Min. 1 hour',
     },
     {
-        title: 'E-commerce & Showroom',
-        rate: 'From €1,800 / day',
-        body: 'On-figure product photography, motion turntables, and pre-collection showroom days. Standard size 40R.',
-        notes: 'Min. full day · Web only',
+        title: 'Boyfriend Experience',
+        rate: 'From $150 / hour',
+        body: 'I play partner for the night however you like, we can head out or stay in.',
+        notes: 'Min. 3 hours',
     },
     {
-        title: 'Fragrance & Beauty',
-        rate: 'On request',
-        body: 'Stills and motion for grooming, skincare, and fragrance. Clean-shaven or stubble; passport for international travel.',
-        notes: 'Print · Film · Social',
+        title: 'Event Plus One',
+        rate: 'From $200 / hour',
+        body: 'Let me be your date for any event, we can create a story and be discrete.',
+        notes: 'Min. 3 hours',
     },
     {
-        title: 'Brand Appearances',
-        rate: 'From €3,200 / event',
-        body: 'Store openings, dinners, runway sides, and press days. Black-tie and tailored options always packed.',
-        notes: 'Travel & per diem extra',
+        title: 'Sleepover',
+        rate: 'From $150 / hour',
+        body: 'I stay the night and we can get up to all sorts of fun.',
+        notes: 'Min. 8 hours',
     },
 ];
 
@@ -202,6 +181,42 @@ const currently = [
 
 <template>
     <Head title="Jordan V - Male Escort">
+        <meta
+            name="description"
+            content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
+        />
+        <meta
+            property="keywords"
+            content="male escort Melbourne, Melbourne male escort, male companion Melbourne, escort Melbourne, male escort for hire Melbourne, professional male companion Melbourne, discreet male escort Melbourne, male escort dinner date Melbourne, travel companion Melbourne, male escort for events Melbourne, male escort corporate events Melbourne, companion for social functions Melbourne, male date for hire Melbourne, overnight companion Melbourne, weekend travel companion Melbourne, elite male escort Melbourne, luxury companion Melbourne, mature male escort Melbourne"
+        />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:none, noimageindex"
+        />
+        <meta
+            name="googlebot"
+            content="index, follow, max-image-preview:none, noimageindex"
+        />
+        <meta name="bingbot" content="index, follow, noimageindex" />
+        <meta name="ai" content="noimageai, noai" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Jordan V" />
+        <meta property="og:title" content="Jordan V - Male Escort" />
+        <meta
+            property="og:description"
+            content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
+        />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/img/1.jpg" />
+        <meta property="og:image:alt" content="Jordan V portrait" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Jordan V - Male Escort" />
+        <meta
+            name="twitter:description"
+            content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
+        />
+        <meta name="twitter:image" content="/img/1.jpg" />
+        <link rel="canonical" href="/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
             rel="preconnect"
@@ -217,7 +232,8 @@ const currently = [
     <div class="portfolio min-h-screen bg-stone-50 text-stone-900 antialiased dark:bg-neutral-950 dark:text-stone-100">
         <!-- Top utility bar -->
         <div
-            class="hidden border-b border-stone-200 bg-stone-50 text-[11px] tracking-[0.18em] text-stone-500 uppercase md:block dark:border-neutral-900 dark:bg-neutral-950 dark:text-neutral-500"
+        v-if="false"
+            class="border-b border-stone-200 bg-stone-50 text-[11px] tracking-[0.18em] text-stone-500 uppercase md:block dark:border-neutral-900 dark:bg-neutral-950 dark:text-neutral-500"
         >
             <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
                 <span>Available worldwide · SS26 booking now open</span>
@@ -241,16 +257,17 @@ const currently = [
                     >
                         JV
                     </span>
-                    <span class="hidden text-xs tracking-[0.3em] uppercase text-stone-500 sm:inline dark:text-neutral-400">
+                    <span v-if="false" class="hidden text-xs tracking-[0.3em] uppercase text-stone-500 sm:inline dark:text-neutral-400">
                         Jordan V
                     </span>
                 </a>
 
                 <div class="hidden items-center gap-8 text-[13px] tracking-[0.2em] uppercase md:flex">
-                    <a href="#work" class="hover:opacity-60">Work</a>
                     <a href="#about" class="hover:opacity-60">About</a>
-                    <a href="#journey" class="hover:opacity-60">Journey</a>
+                    <a href="#pics" class="hover:opacity-60">Pics</a>
+                    <a href="#stats" class="hover:opacity-60">Stats</a>
                     <a href="#services" class="hover:opacity-60">Services</a>
+                    <a href="#compliments" class="hover:opacity-60">Compliments</a>
                     <a href="#contact" class="hover:opacity-60">Contact</a>
                 </div>
 
@@ -294,8 +311,8 @@ const currently = [
                     </button>
 
                     <a
-                        href="#contact"
-                        class="hidden rounded-full bg-stone-900 px-5 py-2 text-[12px] font-medium tracking-[0.18em] text-stone-50 uppercase transition hover:bg-stone-700 md:inline-block dark:bg-stone-100 dark:text-neutral-950 dark:hover:bg-stone-300"
+                        href="mailto:readwithjordanv@gmail.com?Subject=Interested..."
+                        class="rounded-full bg-stone-900 px-5 py-2 text-[12px] font-medium tracking-[0.18em] text-stone-50 uppercase transition hover:bg-stone-700 md:inline-block dark:bg-stone-100 dark:text-neutral-950 dark:hover:bg-stone-300"
                     >
                         Book
                     </a>
@@ -330,12 +347,11 @@ const currently = [
                 class="border-t border-stone-200 bg-stone-50 md:hidden dark:border-neutral-900 dark:bg-neutral-950"
             >
                 <div class="flex flex-col px-6 py-6 text-[13px] tracking-[0.2em] uppercase">
-                    <a href="#work" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Work</a>
                     <a href="#about" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">About</a>
-                    <a href="#journey" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Journey</a>
+                    <a href="#pics" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Pics</a>
                     <a href="#stats" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Stats</a>
                     <a href="#services" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Services</a>
-                    <a href="#press" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Press</a>
+                    <a href="#compliments" class="border-b border-stone-200 py-3 dark:border-neutral-900" @click="isMenuOpen = false">Compliments</a>
                     <a href="#contact" class="py-3" @click="isMenuOpen = false">Contact</a>
                 </div>
             </div>
@@ -347,7 +363,7 @@ const currently = [
                 <div class="col-span-12 flex flex-col justify-between gap-10 md:col-span-5">
                     <div class="flex items-center gap-3 text-[11px] tracking-[0.3em] text-stone-500 uppercase dark:text-neutral-400">
                         <span class="h-px w-10 bg-stone-400 dark:bg-neutral-600" />
-                        Portfolio · Vol. 07 · 2018 — 2026
+                        Profile · 2023 — 2026
                     </div>
 
                     <div>
@@ -358,23 +374,20 @@ const currently = [
                             <span class="block italic text-stone-700 dark:text-stone-300">V</span>
                         </h1>
                         <p class="mt-8 max-w-md text-base leading-relaxed text-stone-600 dark:text-neutral-400">
-                            I’m Jordan — a model from Marseille, currently
-                            based between Paris and Brooklyn. This is a
-                            personal archive of the work I’m proud of and the
-                            people I’ve made it with.
+                            Melbourne Daddy creator and companion that enjoys reading erotica. Available for meetings or creative collaboration.
                         </p>
                     </div>
 
-                    <div class="flex items-center gap-4">
-                        <a
-                            href="#work"
+                    <div class="flex items-center gap-4" v-if="false">
+                        <a 
+                            href="#pics"
                             class="group inline-flex items-center gap-3 rounded-full border border-stone-900 px-6 py-3 text-[12px] tracking-[0.2em] uppercase transition hover:bg-stone-900 hover:text-stone-50 dark:border-stone-100 dark:hover:bg-stone-100 dark:hover:text-neutral-950"
                         >
                             View Portfolio
                             <span class="transition group-hover:translate-x-1">→</span>
                         </a>
                         <a
-                            href="#contact"
+                            href="mailto:readwithjordanv@gmail.com?Subject=Interested..."
                             class="text-[12px] tracking-[0.2em] uppercase underline-offset-4 hover:underline"
                         >
                             Booking enquiries
@@ -386,7 +399,7 @@ const currently = [
                     <div class="relative aspect-[4/5] w-full overflow-hidden bg-stone-200 dark:bg-neutral-900">
                         <img
                             :src="heroImage"
-                            alt="Jonas Vale editorial portrait"
+                            alt="Jordan Vee editorial portrait"
                             class="h-full w-full object-cover grayscale transition duration-700 hover:grayscale-0"
                             loading="eager"
                         />
@@ -402,13 +415,13 @@ const currently = [
                     <div
                         class="absolute -left-6 top-8 hidden -rotate-90 origin-left text-[10px] tracking-[0.3em] text-stone-500 uppercase md:block dark:text-neutral-500"
                     >
-                        Est. 2018 — Paris
+                        Est. 2023 — NZ
                     </div>
                 </div>
             </div>
 
             <!-- Marquee -->
-            <div class="border-t border-b border-stone-200 bg-stone-100 py-5 dark:border-neutral-900 dark:bg-neutral-900/40">
+            <div class="hidden border-t border-b border-stone-200 bg-stone-100 py-5 dark:border-neutral-900 dark:bg-neutral-900/40">
                 <div class="marquee flex gap-12 overflow-hidden text-[13px] tracking-[0.4em] whitespace-nowrap text-stone-700 uppercase dark:text-neutral-300">
                     <div class="marquee-track flex shrink-0 items-center gap-12 px-6">
                         <template v-for="i in 2" :key="i">
@@ -435,7 +448,7 @@ const currently = [
                                 loading="lazy"
                             />
                         </div>
-                        <p class="mt-3 text-[11px] tracking-[0.25em] text-stone-500 uppercase dark:text-neutral-500">
+                        <p v-if="false" class="mt-3 text-[11px] tracking-[0.25em] text-stone-500 uppercase dark:text-neutral-500">
                             Backstage · Pitti Uomo, Florence
                         </p>
                     </div>
@@ -449,79 +462,78 @@ const currently = [
                     <h2
                         class="font-display mt-6 text-4xl leading-[1.05] font-light tracking-tight md:text-6xl"
                     >
-                        I grew up
+                        The ultimate partner for
                         <span class="italic text-stone-500 dark:text-neutral-400">
-                            between two ports —
+                         any occasion   
                         </span>
-                        and I’ve been moving ever since.
+                        .
                     </h2>
                     <div class="mt-10 grid grid-cols-1 gap-6 text-base leading-relaxed text-stone-700 md:grid-cols-2 dark:text-neutral-300">
                         <p>
-                            My mother is a violin teacher, my father captains
-                            a small commercial boat out of Marseille. I spent
-                            half my childhood on the docks and the other half
-                            in Brooklyn with my grandmother. I think both of
-                            those places are still in the way I stand in front
-                            of a camera.
+                            I love being social as much as I enjoy quiet time so I'm happy to spend time however you like. We can go out for the Boyfriend Experience or we can stay in for other experiences...
                         </p>
                         <p>
-                            I love the slow parts of this job: the long fittings,
-                            the quiet ten minutes before a show, the hour after
-                            wrap when the stylist is folding things back into
-                            crates. The flashbulbs are nice. The crates are
-                            where I learned the most.
+                            We can talk, we can play, I can listen or I let me be your plus one when you need it - we can make up a little story to be discrete. Whatever you need, I just want to be there for you. 
+                        </p>
+                        <p>
+                            As someone who's spent much of their life in the hospitality industry and corporate life, I enjoy spending time with people and making sure people have a great time.
+                        </p>
+                        <p>
+                            You lead the way or let me take charge.
+                        </p>
+                        <p>
+                            Open to experiences with couples also.
                         </p>
                     </div>
 
                     <p
                         class="font-display mt-10 max-w-xl border-l-2 border-stone-300 pl-6 text-2xl leading-snug font-light italic text-stone-700 dark:border-neutral-700 dark:text-stone-300"
                     >
-                        “Stillness is the loudest thing you can do in front of
-                        a lens — so I try to do it well.”
+                        Jordan is an incredible companion. There's no way you won't enjoy yourself, whatever you want to do.”
                     </p>
 
                     <dl class="mt-12 grid grid-cols-2 gap-x-10 gap-y-8 border-t border-stone-200 pt-10 sm:grid-cols-3 dark:border-neutral-900">
                         <div>
                             <dt class="text-[11px] tracking-[0.25em] text-stone-500 uppercase dark:text-neutral-500">
-                                Years modelling
+                                Years Active
                             </dt>
-                            <dd class="font-display mt-2 text-3xl font-light">07</dd>
+                            <dd class="font-display mt-2 text-3xl font-light">03</dd>
                         </div>
                         <div>
                             <dt class="text-[11px] tracking-[0.25em] text-stone-500 uppercase dark:text-neutral-500">
-                                Covers I’ve shot
+                                Dates
                             </dt>
-                            <dd class="font-display mt-2 text-3xl font-light">32</dd>
+                            <dd class="font-display mt-2 text-3xl font-light">114</dd>
                         </div>
                         <div>
                             <dt class="text-[11px] tracking-[0.25em] text-stone-500 uppercase dark:text-neutral-500">
-                                Cities I’ve walked
+                                Enjoyment
                             </dt>
-                            <dd class="font-display mt-2 text-3xl font-light">14</dd>
+                            <dd class="font-display mt-2 text-3xl font-light">100%</dd>
                         </div>
                     </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Editorial Work Grid -->
-        <section id="work" class="border-b border-stone-200 dark:border-neutral-900">
+        <!-- Editorial Pics Grid -->
+        <section id="pics" class="border-b border-stone-200 dark:border-neutral-900">
             <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
                 <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
                     <div>
-                        <div class="flex items-center gap-3 text-[11px] tracking-[0.3em] text-stone-500 uppercase dark:text-neutral-400">
+                        <div class="hidden flex items-center gap-3 text-[11px] tracking-[0.3em] text-stone-500 uppercase dark:text-neutral-400">
                             <span class="h-px w-10 bg-stone-400 dark:bg-neutral-600" />
-                            Selected Work
+                            Pics
                         </div>
                         <h2 class="font-display mt-6 text-4xl leading-[1.05] font-light tracking-tight md:text-6xl">
-                            Editorials &amp; Campaigns
+                            Pics
                         </h2>
                     </div>
                     <a
-                        href="#contact"
+                        href="mailto:readwithjordanv@gmail.com?Subject=Interested..."
                         class="text-[12px] tracking-[0.2em] uppercase underline-offset-4 hover:underline"
                     >
-                        Request full book →
+                        Book some time →
                     </a>
                 </div>
 
@@ -562,7 +574,7 @@ const currently = [
         </section>
 
         <!-- Journey / Timeline -->
-        <section id="journey" class="border-b border-stone-200 dark:border-neutral-900">
+        <section id="journey" class="hidden border-b border-stone-200 dark:border-neutral-900">
             <div class="mx-auto grid max-w-7xl grid-cols-12 gap-8 px-6 py-24 md:py-32">
                 <div class="col-span-12 md:col-span-4">
                     <div class="sticky top-32">
@@ -611,7 +623,7 @@ const currently = [
         </section>
 
         <!-- Currently -->
-        <section class="border-b border-stone-200 bg-stone-900 py-16 text-stone-100 dark:border-neutral-900 dark:bg-neutral-900">
+        <section class="hidden border-b border-stone-200 bg-stone-900 py-16 text-stone-100 dark:border-neutral-900 dark:bg-neutral-900">
             <div class="mx-auto grid max-w-7xl grid-cols-12 gap-8 px-6">
                 <div class="col-span-12 flex flex-wrap items-baseline gap-x-4 gap-y-2 md:col-span-3">
                     <span class="text-[11px] tracking-[0.3em] text-stone-400 uppercase">
@@ -644,12 +656,12 @@ const currently = [
                 <div class="col-span-12 md:col-span-4">
                     <div class="flex items-center gap-3 text-[11px] tracking-[0.3em] text-stone-500 uppercase dark:text-neutral-400">
                         <span class="h-px w-10 bg-stone-400 dark:bg-neutral-600" />
-                        Measurements
+                        Stats
                     </div>
                     <h2 class="font-display mt-6 text-4xl leading-[1.05] font-light tracking-tight md:text-5xl">
                         On the card.
                     </h2>
-                    <p class="mt-6 max-w-sm text-stone-600 dark:text-neutral-400">
+                    <p class="hidden mt-6 max-w-sm text-stone-600 dark:text-neutral-400">
                         Sizes are kept current as of last fitting. For
                         campaign-specific tailoring measurements, contact the
                         agency.
@@ -684,22 +696,22 @@ const currently = [
                                 Services
                             </div>
                             <h2 class="font-display mt-6 text-4xl leading-[1.05] font-light tracking-tight md:text-5xl">
-                                What I’m
+                                What I
                                 <span class="italic text-stone-500 dark:text-neutral-400">
-                                    booked for.
+                                    offer.
                                 </span>
                             </h2>
                             <p class="mt-6 max-w-sm text-stone-600 dark:text-neutral-400">
-                                A short menu of the work I do most. Rates are
-                                indicative — every project has its own shape.
-                                Usage, travel, and exclusivity are quoted
-                                separately by my agent.
+                                A short menu of some of the services I offer.
+                            </p>
+                            <p class="mt-6 max-w-sm text-stone-600 dark:text-neutral-400">
+                                If what you're after doesn't fit into these services, make an enquiry and we can work something out.
                             </p>
                             <a
-                                href="#contact"
+                                href="mailto:readwithjordanv@gmail.com?Subject=Interested..."
                                 class="mt-8 inline-flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase underline-offset-4 hover:underline"
                             >
-                                Request a custom quote →
+                                Book some time →
                             </a>
                         </div>
                     </div>
@@ -733,15 +745,15 @@ const currently = [
             </div>
         </section>
 
-        <!-- Press -->
-        <section id="press" class="border-b border-stone-200 dark:border-neutral-900">
+        <!-- Compliments -->
+        <section id="compliments" class="border-b border-stone-200 dark:border-neutral-900">
             <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
                 <div class="flex items-center gap-3 text-[11px] tracking-[0.3em] text-stone-500 uppercase dark:text-neutral-400">
                     <span class="h-px w-10 bg-stone-400 dark:bg-neutral-600" />
-                    Press
+                    Compliments
                 </div>
                 <h2 class="font-display mt-6 max-w-3xl text-4xl leading-[1.05] font-light tracking-tight md:text-6xl">
-                    What the press is saying.
+                    Kind words from my clients.
                 </h2>
 
                 <div class="mt-16 grid grid-cols-1 gap-px bg-stone-200 md:grid-cols-3 dark:bg-neutral-800">
@@ -774,36 +786,28 @@ const currently = [
                         <span class="italic">hello.</span>
                     </h2>
                     <p class="mt-8 max-w-lg text-stone-300">
-                        For editorial, runway, and campaign enquiries please
-                        reach out to my agent at
-                        <span class="text-stone-100">Atelier Mgmt</span>
-                        in Paris. For everything else — a coffee, a question,
-                        a kind word — my inbox is open.
+                        For bookings, let's just start with an email and see how it goes.
+                    </p>
+                    <p class="mt-8 max-w-lg text-stone-300">
+                        There's no need to be shy.
                     </p>
 
                     <div class="mt-10 space-y-6">
                         <a
-                            href="mailto:hello@jonasvale.com"
+                            href="mailto:readwithjordanv@gmail.com?Subject=Interested..."
                             class="font-display flex items-center gap-4 text-2xl font-light italic underline decoration-stone-600 underline-offset-8 transition hover:decoration-stone-100 md:text-4xl"
                         >
-                            hello@jonasvale.com
+                            readwithjordanv@gmail.com
                             <span class="text-xl">↗</span>
-                        </a>
-                        <a
-                            href="mailto:bookings@ateliermgmt.com"
-                            class="font-display flex items-center gap-4 text-xl font-light italic text-stone-300 underline decoration-stone-700 underline-offset-8 transition hover:text-stone-100 hover:decoration-stone-300 md:text-2xl"
-                        >
-                            bookings@ateliermgmt.com
-                            <span class="text-base">↗</span>
                         </a>
                     </div>
 
                     <p class="font-display mt-16 text-3xl font-light italic text-stone-300 md:text-4xl">
-                        — Jonas
+                        — Jordan
                     </p>
                 </div>
 
-                <aside class="col-span-12 md:col-span-5">
+                <aside class="col-span-12 md:col-span-5 hidden">
                     <div class="border border-stone-800 p-6">
                         <h3 class="text-[11px] tracking-[0.25em] text-stone-400 uppercase">
                             Mother Agency
@@ -839,10 +843,9 @@ const currently = [
 
             <div class="border-t border-stone-800">
                 <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-6 py-8 text-[11px] tracking-[0.25em] text-stone-400 uppercase md:flex-row md:items-center">
-                    <span>© {{ new Date().getFullYear() }} Jonas Vale — a personal archive.</span>
+                    <span>© {{ new Date().getFullYear() }} Jordan Vee — Melbourne Male Escort.</span>
                     <div class="flex gap-6">
-                        <a href="#" class="hover:text-stone-100">Instagram · @jonas.vale</a>
-                        <a href="#" class="hover:text-stone-100">Models.com</a>
+                        <a target="_blank" href="https://linktr.ee/readwithjordanv" class="hover:text-stone-100">Links</a>
                     </div>
                 </div>
             </div>

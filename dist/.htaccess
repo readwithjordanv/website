@@ -1,9 +1,3 @@
-<IfModule mod_headers.c>
-    <FilesMatch "\.(jpg|jpeg|png|webp|gif|avif|svg)$">
-        Header set X-Robots-Tag "noimageindex, noai, noimageai"
-    </FilesMatch>
-</IfModule>
-
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

@@ -5,6 +5,7 @@
     "homepage": "https://readwithjordanv.github.io/website",
     "scripts": {
         "build": "vite build",
+        "build:static": "vite build --config vite.static.config.ts",
         "build:ssr": "vite build && vite build --ssr",
         "dev": "vite",
         "format": "prettier --write resources/",
@@ -12,7 +13,8 @@
         "lint": "eslint . --fix",
         "lint:check": "eslint .",
         "types:check": "vue-tsc --noEmit",
-        "deploy": "gh-pages -d public/build"
+        "deploy": "gh-pages -d public/build",
+        "deploy:static": "npm run build:static && gh-pages -d dist"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
