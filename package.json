@@ -2,7 +2,7 @@
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
-    "homepage": "https://readwithjordanv.github.io",
+    "homepage": "https://jordanv.xyz",
     "scripts": {
         "build": "vite build",
         "build:static": "vite build --config vite.static.config.ts",
