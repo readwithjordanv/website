@@ -13,12 +13,12 @@
         <meta property="og:title" content="Jordan V - Melbourne Male Escort">
         <meta property="og:description" content="Jordan V offers premium male escort experiences, including private dates, travel companionship, and bespoke bookings.">
         <meta property="og:url" content="/">
-        <meta property="og:image" content="/img/1.jpg">
+        <meta property="og:image" content="/dist/img/1.jpg">
         <meta property="og:image:alt" content="Jordan V portrait">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Jordan V - Melbourne Male Escort">
         <meta name="twitter:description" content="Jordan V offers premium male escort experiences, including private dates, travel companionship, and bespoke bookings.">
-        <meta name="twitter:image" content="/img/1.jpg">
+        <meta name="twitter:image" content="/dist/img/1.jpg">
         <link rel="canonical" href="/">
 
         {{-- Inline script to detect system dark mode preference and apply it immediately --}}
@@ -47,9 +47,9 @@
             }
         </style>
 
-        <link rel="icon" href="/img/favicon.png" type="image/png" sizes="any">
-        <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
-        <link rel="apple-touch-icon" href="/img/favicon.png">
+        <link rel="icon" href="/dist/img/favicon.png" type="image/png" sizes="any">
+        <link rel="shortcut icon" href="/dist/img/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" href="/dist/img/favicon.png">
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />

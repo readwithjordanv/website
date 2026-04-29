@@ -35,27 +35,27 @@ onUnmounted(() => {
 
 const toAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
-const heroImage = toAssetPath('/img/1.jpg');
+const heroImage = toAssetPath('/dist/img/1.jpg');
 
-const aboutImage = toAssetPath('/img/4.jpg');
+const aboutImage = toAssetPath('/dist/img/4.jpg');
 
 const editorial = [
     {
-        src: toAssetPath('/img/3.jpg'),
+        src: toAssetPath('/dist/img/3.jpg'),
         title: '',
         location: '',
         year: '2026',
         span: 'md:col-span-5 md:row-span-2',
     },
     {
-        src: toAssetPath('/img/2.jpg'),
+        src: toAssetPath('/dist/img/2.jpg'),
         title: '',
         location: '',
         year: '2026',
         span: 'md:col-span-3',
     },
     {
-        src: toAssetPath('/img/1.jpg'),
+        src: toAssetPath('/dist/img/1.jpg'),
         title: '',
         location: '',
         year: '2026',
@@ -207,7 +207,7 @@ const currently = [
             content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
         />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/1.jpg" />
+        <meta property="og:image" content="/dist/img/1.jpg" />
         <meta property="og:image:alt" content="Jordan V portrait" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Jordan V - Male Escort" />
@@ -215,7 +215,7 @@ const currently = [
             name="twitter:description"
             content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
         />
-        <meta name="twitter:image" content="/img/1.jpg" />
+        <meta name="twitter:image" content="/dist/img/1.jpg" />
         <link rel="canonical" href="/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
