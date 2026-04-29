@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /img/
+Disallow: /dist/img/
 Disallow: /storage/
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
