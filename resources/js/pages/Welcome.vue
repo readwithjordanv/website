@@ -406,8 +406,7 @@ const currently = [
                         <div
                             class="absolute right-4 bottom-4 flex flex-col items-end gap-1 text-[10px] tracking-[0.25em] text-stone-50 uppercase mix-blend-difference"
                         >
-                            <span>SS26 Campaign</span>
-                            <span>Photo · Lila Moreau</span>
+                            <span>Photos · Jen Moreau</span>
                         </div>
                     </div>
 
