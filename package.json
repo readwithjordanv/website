@@ -13,7 +13,7 @@
         "lint": "eslint . --fix",
         "lint:check": "eslint .",
         "types:check": "vue-tsc --noEmit",
-        "deploy": "gh-pages -d dist",
+        "deploy": "vite build && gh-pages -d dist",
         "deploy:static": "npm run build:static && gh-pages -d dist"
     },
     "devDependencies": {
