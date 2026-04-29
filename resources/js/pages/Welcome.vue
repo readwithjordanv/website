@@ -180,7 +180,7 @@ const currently = [
 </script>
 
 <template>
-    <Head title="Jordan V - Male Escort">
+    <Head title="Jordan V - Melbourne Based Male Escort">
         <meta
             name="description"
             content="Discreet male escort services in Melbourne. Available for dinner dates, social functions, travel companionship, and private bookings. Genuine connections, unforgettable experiences."
